@@ -1,0 +1,56 @@
+@import url('styles.css');
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 2em;
+    margin: 3em;
+    border-radius: 2em;
+}
+
+h2 {
+    margin-bottom: 0.25em;
+}
+
+/* Sections */
+.commander {
+    background: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.decks img {
+    margin-top: 0.5em;
+    box-shadow: var(--shadow);
+}
+
+.decks a {
+    text-decoration: underline;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: var(--font-body);
+}
+
+.basketball {
+    background-image: url("../img/bball.jpeg");
+    background-size: cover;
+    color: var(--color-light);
+    align-items: center;
+    text-align: center;
+}
+
+.snowboard {
+    background-image: url("../img/snow.jpeg");
+    background-size: cover;
+    color: var(--color-light);
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5em;
+}   

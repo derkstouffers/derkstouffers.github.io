@@ -1,0 +1,54 @@
+@import url('styles.css');
+
+/* General Styling */
+body {
+    /* Made using https://mycolor.space/gradient */
+    background-image: linear-gradient(to right bottom, #003262, #005b8c, #0087ad, #00b3c3, #40e0d0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Home Button */
+header {
+    margin: 0.5em, 1em;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+/* Contact Page */
+.contact-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 250px;
+    padding: 1em;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.contact-name {
+    color: var(--color-light);
+    text-align: center;
+    font-size: var(--font-sm);
+}
+
+/* Links */
+.links a {
+    text-align: center;
+    border: 2px solid var(--color-light);
+    border-radius: 15px;
+    display: block;
+    margin: 1em 3em;
+    padding: 1em;
+    transition: transform 0.5s ease;
+}
+
+.links a:hover {
+    transform: scale(1.05);
+}

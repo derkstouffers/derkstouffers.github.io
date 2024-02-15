@@ -1,0 +1,204 @@
+/* Custom Properties */
+:root {
+    --color-light:  #fafafa;
+    --color-dark: #1f1f1f;
+    --color-accent: #0087ad;
+
+    --font: "Lato", sans-serif;
+    --font-lg: 3em;
+    --font-md: 2.5em;
+    --font-sm: 1.5em;
+    --font-body: 1em;
+
+    --shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.5), 0.125em 0.125em 0.25em rgba(0,0,0,0.25);
+}
+
+/* General */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Redefine variables for larger screens */
+@media (min-width: 800px) {
+    :root {
+        --font-lg: 4em;
+        --font-md: 3.5em;
+        --font-sm: 2em;
+        --font-body: 1.25em;
+    }
+}
+
+body {
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-family: var(--font);
+    font-size: var(--font-body);
+    line-height: 1.5;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    box-shadow: var(--shadow);
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Titles, Paragraphs, Headings, etc. */
+h1, h2, h3 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: var(--font-lg);
+}
+
+h2 {
+    font-size: var(--font-md);
+}
+
+h3 {
+    font-size: var(--font-sm);
+}
+
+.section-title {
+    margin-bottom: 0.25em;
+}
+
+.section-title--intro {
+    margin-left: 0.25em;
+    margin-top: 2em;
+}
+
+.section-subtitle {
+    margin: 0;
+    font-size: var(--font-sm);
+}
+
+.section-subtitle--decor {
+    background: var(--color-accent);
+    color: var(--color-accent);
+    margin-bottom: 0.5em;
+    padding: 0.25em 1em;
+}
+
+/* Intro Section */
+.intro {
+    position: relative;
+}
+
+/* Header Image + Name Area */
+@media only screen and (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column: 1em;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content; 
+    }
+
+    .intro-img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-subtitle--decor {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 1em);
+    }
+}
+
+/* About Me */
+.about-me {
+    background: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 2em;
+    text-align: center;
+    margin: 0 1.5em;
+    margin-bottom: 5em;
+}
+
+.section-title--about {
+    position: relative;
+    color: var(--color-light);
+    margin-top: 0.5em;
+}
+
+/* Header */
+@media only screen and (max-width: 599px) {
+    /* Vertical */
+    ul {
+        list-style: none;
+        background-color: var(--color-dark);
+        width: 100%;
+    }
+
+    li a {
+        display: block;
+        color: var(--color-light);
+        font-size: var(--font-sm);
+        padding: 0.5em 0.5em;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* Horizontal */
+    ul {
+        list-style: none;
+        margin: 0;
+        margin-top: 1em;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    li {
+        margin: 0 1em;
+    }
+    
+    li a {
+        display: block;
+        color: var(--color-dark);
+        font-size: var(--font-body);
+        padding: 0.5em 0.5em;
+        transition: color 0.2s ease-in-out;
+    }
+
+    li a:hover {
+        color: var(--color-accent);
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    margin-top: 2em;
+    position: fixed;
+    width: 100%;
+    bottom: 0; 
+}
