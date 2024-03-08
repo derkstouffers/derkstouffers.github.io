@@ -56,7 +56,7 @@ h2 {
 }  
 
 .connect-4 {
-    background-color: var(--color-dark);
+    background: var(--color-dark);
     color: var(--color-light);
     align-items: center;
     text-align: center;
